@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/bramp135/junipergatehome.ca/
+    - /bin/cp -r * $DEPLOYPATH
+
