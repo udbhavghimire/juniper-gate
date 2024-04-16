@@ -20,6 +20,7 @@ $mail->SMTPSecure = 'tls'; // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 587; // TCP port to connect to
 
 $mail->setFrom('info@junipergatehome.ca', $_POST['name']);
+$mail->addAddress('hello@dolphy.ca');
 $mail->addAddress('milan@homebaba.ca');
 
 
@@ -31,50 +32,50 @@ $mail->Subject = "Juniper Gate Home - Landing Page Inquiry";
 $message = '<html>
 
 <body>';
-    $message .= '<table rules="all" style="border:none;" cellpadding="3">';
-        $message .= "<tr>
+$message .= '<table rules="all" style="border:none;" cellpadding="3">';
+$message .= "<tr>
             <td><strong>Name:</strong> </td>
             <td>" . strip_tags($_POST['name']) . "</td>
         </tr>";
-        $message .= "<tr>
+$message .= "<tr>
             <td><strong>Phone:</strong> </td>
             <td>" . strip_tags($_POST['phone']) . "</td>
         </tr>";
-        $message .= "<tr>
+$message .= "<tr>
             <td><strong>Email:</strong> </td>
             <td>" . strip_tags($_POST['email']) . "</td>
         </tr>";
-        $message .= "<tr>
+$message .= "<tr>
         <td><strong>Realtor or working with one?:</strong> </td>
         <td>" . strip_tags($_POST['realtor']) . "</td>
     </tr>";
-        $message .= "<tr>
+$message .= "<tr>
             <td><strong>Message : </strong> </td>
             <td>" . strip_tags($_POST['message']) . "</td>
         </tr>";
-        $message .= "<tr>
+$message .= "<tr>
             <td><strong>Source : </strong> </td>
             <td>junipergatehome.ca</td>
         </tr>";
-        $message .= "</table>";
-    $message .= "</body>
+$message .= "</table>";
+$message .= "</body>
 
 </html>";
 
 $mail->Body = $message;
-$mail->AltBody = $_POST['message'].$_POST['email'].$_POST['name'].$_POST['phone'];
+$mail->AltBody = $_POST['message'] . $_POST['email'] . $_POST['name'] . $_POST['phone'];
 
-if(!$mail->send()) {
+if (!$mail->send()) {
     $_SESSION["error"] = "Application not submitted!";
-    
-        header('Location: index.php');
-        exit();   
-    
+
+    header('Location: index.php');
+    exit();
+
 } else {
     $_SESSION["success"] = "Application submitted.";
-        header('Location: ./');
-        exit();   
-    
+    header('Location: ./');
+    exit();
+
 }
 
 ?>

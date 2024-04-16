@@ -4,6 +4,7 @@
 } */
 
 @import url('https://fonts.googleapis.com/css2?family=Ysabeau+Infant&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -90,7 +91,7 @@ font-family: "Helvetica Neue" !important;
 }
 
 .navbar-brand {
-   
+
     font-weight: 900 !important;
     font-size: 2.5rem !important;
     margin-right: 0rem !important;
@@ -168,7 +169,7 @@ font-family: "Helvetica Neue" !important;
 #hero {
     width: 100%;
     height: 100vh;
-    background: linear-gradient(rgba(74, 73, 73, 0.5), rgba(40, 37, 37, 0.2)), url("../images/GettyImages.jpg");
+    background: linear-gradient(rgba(74, 73, 73, 0.5), rgba(40, 37, 37, 0.2)), url("../images/juniper gate 2.jpg");
     background-size: cover;
     background-position: center;
     position: relative;
@@ -177,7 +178,7 @@ font-family: "Helvetica Neue" !important;
 #hero .hero-container {
     position: relative;
     display: flex;
-    height: 145vh;
+    height: 83vh;
     justify-content: center;
     flex-direction: column;
 }
@@ -193,7 +194,7 @@ font-family: "Helvetica Neue" !important;
 }
 
 .main-titlee {
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 500;
     color: #ffffff;
     line-height: 0.95;
@@ -216,7 +217,7 @@ font-family: "Helvetica Neue" !important;
 }
 
 .headline-textt {
-    font-size: 1.8rem !important;
+    font-size: 1.2rem !important;
     font-weight: 500 !important;
     line-height: 2rem;
     text-align: justify;
@@ -270,7 +271,7 @@ font-family: "Helvetica Neue" !important;
     background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%) !important;
     background-size: 200% 100% !important;
     animation: shine 1.5s linear infinite;
-    height: 320px !important;
+    height: 350px !important;
     width: 100% !important;
     object-fit: cover !important;
     border-radius: 10px !important;
@@ -351,9 +352,6 @@ font-family: "Helvetica Neue" !important;
     font-size: 12px;
 }
 
-.footer-logo {
-    width: 150px;
-}
 
 .fotwidth {
     max-inline-size: 450px;
@@ -361,6 +359,14 @@ font-family: "Helvetica Neue" !important;
 
 .mybot {
     margin-bottom: 3px !important;
+}
+
+.regoimg {
+    height: 50px !important;
+}
+
+.remington {
+    height: 70px !important;
 }
 
 @media (min-width: 1024px) {
@@ -376,30 +382,39 @@ font-family: "Helvetica Neue" !important;
         font-size: 2rem !important;
         margin-right: 0rem !important;
     }
+
     .headline-textt {
         font-size: 1.1rem !important;
         font-weight: 500 !important;
         line-height: 2rem;
         text-align: justify;
     }
+
     #hero .hero-container {
         position: relative;
         display: flex;
-        height: 152vh !important;
+        height: 80vh !important;
         justify-content: center;
         flex-direction: column;
     }
+
     #hero h1 {
         font-size: 44px;
         line-height: 46px;
     }
+
     .textt {
         font-size: 18px;
         max-width: 800px;
         margin-left: auto;
         margin-right: auto;
     }
+
     .center-sm {
         text-align: center;
+    }
+
+    .full-width {
+        flex: 0 0 100% !important;
     }
 }
