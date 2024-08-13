@@ -21,7 +21,7 @@ $mail->Port = 587; // TCP port to connect to
 
 $mail->setFrom('info@junipergatehome.ca', $_POST['name']);
 $mail->addAddress('hello@dolphy.ca');
-$mail->addAddress('milan@homebaba.ca');
+$mail->addAddress('contact@homebaba.ca');
 
 
 
